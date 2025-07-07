@@ -14,7 +14,7 @@ Gostaria inicialmente de agradecer a disponibilidade e preocupação com a segur
 
 ---
 
-## Primeiro documento [Análise Inicial de Exposição TR-069 em Ambiente ISP Real]()
+## Primeiro documento [Análise Inicial de Exposição TR-069 em Ambiente ISP Real](../01-Analise-Inicial-Exposicao/README.md)
 
 **1.1** O painel TR-069 (ACS) do ISP está publicamente acessível, operando em HTTP sem nenhuma criptografia.
 
@@ -24,7 +24,7 @@ Gostaria inicialmente de agradecer a disponibilidade e preocupação com a segur
 
 ---
 
-## Segundo documento [Resumo Técnico da Análise de Exposição CWMP (TR-069) em Ambiente ISP Real]()
+## Segundo documento [Resumo Técnico da Análise de Exposição CWMP (TR-069) em Ambiente ISP Real](../03-Resumo-Tecnico-ACS/README.md)
 
 **2.1** Um atacante externo consegue simular um roteador da rede e enviar comandos ao servidor ACS sem qualquer autenticação, mesmo via internet pública. Isso representa um risco imediato de comprometimento da infraestrutura e dos clientes.
 
@@ -48,7 +48,7 @@ Sobre essa afirmação, acho pertinente explorarmos inicialmente a arquitetura d
 
 ---
 
-## Terceiro documento[Análise Técnica da Comunicação SOAP e Riscos no ACS (TR-069) - Ambiente ISP Real]()
+## Terceiro documento[Análise Técnica da Comunicação SOAP e Riscos no ACS (TR-069) - Ambiente ISP Real](../02-Analise-Tecnica-ACS-SOAP/README.md)
 
 **3.1** Portas abertas sem aparente filtragem, Presença de portas incomuns pode indicar exposição indevida
 
