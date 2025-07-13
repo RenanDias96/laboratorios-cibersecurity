@@ -60,6 +60,7 @@ Ferramentas utilizadas nos labs e projetos:
 ## ✉️ Contato
 
 📫 Conecte-se comigo no LinkedIn: [Renan D M](https://www.linkedin.com/in/renan-d-m-571926373/)
+✉️ E-mail: renandmm96@gmail.com
 
 ---
 
