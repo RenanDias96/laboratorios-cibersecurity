@@ -19,13 +19,9 @@ O objetivo é transformar alertas em ações reais de contenção e mitigação 
 
 ---
 
-## 🚧 Em Desenvolvimento
-
-| Tópico                              | Descrição                                                                         |
-|-------------------------------------|-----------------------------------------------------------------------------------|
-| 🧨 **Drop automático de Portscan**  | Bloqueio imediato de IPs que realizam varreduras de porta detectadas via Suricata |
-| 🪓 **Resposta a Exploração HTTP**   | Detecção de payloads malformados e envio de resets TCP                            |
-| 📈 **Reação baseada em volume**     | Resposta condicional baseada em taxa de eventos (ex: SYN flood, burst)            |
+| Tópico                                        | Descrição                                                                                       |
+|-----------------------------------------------|-------------------------------------------------------------------------------------------------|
+| [SOAR Manual com Flask e Iptables](soar-manual/README.md)            | Controle de resposta a incidentes por botão, com backend em Flask e bloqueio via iptables       |
 
 ---
 
