@@ -2,8 +2,9 @@
 
 🎯 **Objetivo:** Realizar resposta manual a alertas detectados pelo Suricata, via dashboard interativo no Splunk integrado a um backend Flask que aplica bloqueios/whitelist em tempo real usando ipset e iptables. A ideia é compreender de forma mais aprofundada a manipulação dos eventos recebidos pelo Splunk ao invés de simplesmente integrar com uma solução já pronta como TheHive+Cortex
 
-📄 Documento criado por **Renan D M**
-🗓️ Atualizado em **25/07/2025**
+- 📄 Documento criado por **Renan D M**
+- 🗓️ Atualizado em **25/07/2025**
+
 ---
 
 ## 🔗 Ferramentas Utilizadas
@@ -233,7 +234,7 @@ sudo ipset create blacklist hash:ip timeout 3600
 cd /opt/mitigador
 python3 app.py
 ```
-![app.py2](prints/5.png)
+![app.py2](prints/7.png)
 
 ---
 
