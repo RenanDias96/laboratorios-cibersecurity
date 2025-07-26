@@ -53,6 +53,7 @@ sudo chown vboxuser:vboxuser /opt/splunk/etc/apps/search/lookups/
 - Nome: ips_tratados.csv
 
 - Salve e finalize
+
 ![Lookup](prints/2.png)
 
 ---
