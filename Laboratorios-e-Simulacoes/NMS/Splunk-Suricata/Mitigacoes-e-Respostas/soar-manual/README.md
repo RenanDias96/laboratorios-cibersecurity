@@ -244,12 +244,17 @@ python3 app.py
 - Vá ao dashboard no Splunk
 
 - Clique em Passar ou Bloquear para qualquer alerta exibido
+
 ![Janela](prints/8.png)
 
 - Uma nova aba abrirá e será fechada automaticamente
+
 ![Janela2](prints/9.png)
+
 - Para continuar o fluxo, o ip tratado sumirá do dashboard até a sua proxima entrada como um novo alerta, respeitando o iptables e o timeout.
+
 ![Janela3](prints/10.png)
+
 - O IP será registrado no ips_tratados.csv e incluído na ipset
 ![Relatorio](prints/11.png)
 ![Relatorio2](prints/12.png)
