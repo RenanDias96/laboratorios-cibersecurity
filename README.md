@@ -1,15 +1,15 @@
-# 🛡️ Laboratório de Cibersegurança – Renan D M
+# 🛡️ Laboratórios de Cibersegurança – Renan Dias Mendes
 
 <p align="center">
   <img src="assets/soc.png" alt="Capa do Laboratório de Cibersegurança" width="800"/>
 </p>
 
-👋 Olá! Meu nome é **Renan D M**, profissional em transição para a área de **cibersegurança**, com foco em **SOC, Threat Hunting** e **Resposta a Incidentes**.
+👋 Olá! Meu nome é **Renan Dias Mendes**, profissional em transição para a área de **cibersegurança**, com foco em **SOC, Threat Hunting** e **Resposta a Incidentes**.
 
 --- 
 
 ## 🚀 Objetivo do Repositório
-Este repositório tem como objetivo reunir e documentar as experiências e aprendizados práticos na área de cibersegurança. Cada projeto e laboratório é baseado em casos reais e situações que representam desafios enfrentados no campo. O foco está em análises forenses, detecção de ameaças, resposta a incidentes e mitigações de vulnerabilidades, com ênfase na criação de soluções customizadas utilizando ferramentas de ponta da área. Aqui, compartilho minhas descobertas, soluções técnicas e metodologias, visando contribuir com a comunidade e aprimorar minha jornada profissional.
+Este repositório tem como objetivo reunir e documentar as experiências e aprendizados da área de cibersegurança. O foco está em análises forenses, detecção de ameaças, resposta a incidentes e mitigações de vulnerabilidades, com ênfase na criação de soluções customizadas. Aqui, compartilho minhas descobertas, soluções técnicas e metodologias, visando contribuir com a comunidade e aprimorar minha jornada profissional.
 
 ---
 
@@ -54,6 +54,7 @@ Ferramentas utilizadas nos labs e projetos:
 ### 📊 SIEM & Regras Customizadas
 
 - 📈 [Detecção de Portscan com Suricata + Splunk](Laboratorios-e-Simulacoes/NMS/Splunk-Suricata/Regras-e-Alertas/01-Portscan/README.md)
+- 📈 [SOAR Manual com Suricata + Splunk e Backend em Flask + Iptables](Laboratorios-e-Simulacoes/NMS/Splunk-Suricata/Mitigacoes-e-Respostas/soar-manual/README.md)
 
 ---
 
