@@ -1,4 +1,4 @@
-# 🧪 Laboratórios e Simulações
+# Laboratórios e Simulações
 
 <p align="center">
   <img src="../assets/laboratorio-e-simulacao.png" alt="Capa do laboratorio e simulacoes" width="800"/>
