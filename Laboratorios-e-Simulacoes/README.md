@@ -11,10 +11,7 @@ Sem exemplo de vitrine, só coisa testada, quebrada e refeita até funcionar.
 
 ---
 
-## 📁 Estrutura das Pastas
-
-
-### ⚙️ `Instalacao-do-Ambiente-Geral/` 
+### `Instalacao do Ambiente Geral` 
 > Meu setup base para os labs.
 
 - Ativação de sudo
@@ -26,7 +23,7 @@ Sem exemplo de vitrine, só coisa testada, quebrada e refeita até funcionar.
 
 ---
 
-### 📡 `NMS/`
+### `NMS`
 > Foco em detecção, criação de regras e mitigação.
 
 - Detecção de varreduras e IoCs com Suricata
@@ -38,7 +35,7 @@ Sem exemplo de vitrine, só coisa testada, quebrada e refeita até funcionar.
 
 ---
 
-### 🔬 `FORENSE/`
+### `FORENSE`
 > Análise de malware e tráfego malicioso (com base em casos reais).
 
 - Análise de malware com PE-bear, DIE, FLOSS e criação de regra YARA
@@ -48,13 +45,6 @@ Sem exemplo de vitrine, só coisa testada, quebrada e refeita até funcionar.
 - Referência ao MITRE ATT&CK
 
 👉 [Ver pasta](Forense/README.md)
-
----
-
-## 📌 Observações
-
-- Cada laboratório tem seu próprio README com todos os detalhes: comandos, contexto, ferramentas e prints
-- Nenhum conteúdo é copiado. Tudo foi executado, validado e documentado por mim
 
 ---
 
