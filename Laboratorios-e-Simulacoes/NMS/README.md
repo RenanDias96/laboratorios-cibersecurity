@@ -10,7 +10,7 @@ O objetivo aqui é simples: entender como detectar, responder e mitigar ataques 
 
 ---
 
-## 📦 Estrutura Atual
+## Estrutura Atual
 
 ### 📁 `Splunk+Suricata/`
 > Integração entre o IDS Suricata e o SIEM Splunk para detecção e resposta.
@@ -19,21 +19,15 @@ O objetivo aqui é simples: entender como detectar, responder e mitigar ataques 
 
 ---
 
-## 🛠️ Em breve...
+## Em breve...
 
 > Novos laboratórios serão adicionados, com foco em ampliar as possibilidades de análise e resposta a incidentes:
 
-- 📦 **Wazuh**  
+- **Wazuh**  
   Monitoramento de hosts, análise de logs e alertas de anomalias.
 
-- 🧩 **Elastic Stack**  
+- **Elastic Stack**  
   Visualização, correlação e hunting em tempo real.
-
----
-
-## 📌 Objetivo
-
-> Construir um ambiente técnico completo e funcional, que sirva tanto como base para estudos quanto como referência para quem está começando ou evoluindo na área de cibersegurança.
 
 ---
 
