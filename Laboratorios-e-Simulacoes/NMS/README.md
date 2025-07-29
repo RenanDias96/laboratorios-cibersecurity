@@ -1,4 +1,4 @@
-# 🛰️ NMS — Network Monitoring Systems
+# NMS — Network Monitoring Systems
 
 <p align="center">
   <img src="../../assets/nms.png" alt="Capa nms" width="800"/>
@@ -10,9 +10,7 @@ O objetivo aqui é simples: entender como detectar, responder e mitigar ataques 
 
 ---
 
-## Estrutura Atual
-
-### 📁 `Splunk+Suricata/`
+### `Splunk + Suricata`
 > Integração entre o IDS Suricata e o SIEM Splunk para detecção e resposta.
 
 👉 [Ver pasta](Splunk-Suricata/README.md)
