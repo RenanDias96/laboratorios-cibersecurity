@@ -4,9 +4,9 @@
   <img src="../../assets/nms.png" alt="Capa nms" width="800"/>
 </p>
 
-Esta seção contém laboratórios voltados à **detecção de ameaças em redes locais**, com foco em ambientes simulados e redes corporativas.
+Esta seção concentra os laboratórios voltados à detecção de ameaças em redes locais, com ambientes simulados que reproduzem situações de redes corporativas.
 
-Os testes abordam desde a instalação de ferramentas até a criação de regras de detecção, resposta e mitigação. Todo o conteúdo é prático e baseado em situações realistas.
+O objetivo aqui é simples: entender como detectar, responder e mitigar ataques usando ferramentas open source. 
 
 ---
 
@@ -15,28 +15,25 @@ Os testes abordam desde a instalação de ferramentas até a criação de regras
 ### 📁 `Splunk+Suricata/`
 > Integração entre o IDS Suricata e o SIEM Splunk para detecção e resposta.
 
-👉 [Clique Aqui](Splunk-Suricata/README.md)
+👉 [Ver pasta](Splunk-Suricata/README.md)
 ---
 
-## 🛠️ Em Construção
+## 🛠️ Em breve...
 
-As seguintes ferramentas serão adicionadas futuramente a esta seção:
-
-- 🧠 **Zeek**  
-  Análise de tráfego de rede, extração de artefatos e detecção de comportamento suspeito.
+> Novos laboratórios serão adicionados, com foco em ampliar as possibilidades de análise e resposta a incidentes:
 
 - 📦 **Wazuh**  
-  Integração de logs e detecção de anomalias para endpoints e redes.
+  Monitoramento de hosts, análise de logs e alertas de anomalias.
 
 - 🧩 **Elastic Stack**  
-  Visualização e correlação de eventos em tempo real.
+  Visualização, correlação e hunting em tempo real.
 
 ---
 
 ## 📌 Objetivo
 
-> Desenvolver e documentar um ambiente funcional de detecção e resposta a incidentes de rede.
+> Construir um ambiente técnico completo e funcional, que sirva tanto como base para estudos quanto como referência para quem está começando ou evoluindo na área de cibersegurança.
 
 ---
 
-> ⚠️ *Todos os testes foram realizados em ambiente controlado e simulado. As ferramentas utilizadas são open source e as análises têm fins educacionais.*
+> ⚠️ *Todos os testes foram realizados em ambiente isolado. As ferramentas utilizadas são de código aberto, e os experimentos têm fins exclusivamente educacionais.*
