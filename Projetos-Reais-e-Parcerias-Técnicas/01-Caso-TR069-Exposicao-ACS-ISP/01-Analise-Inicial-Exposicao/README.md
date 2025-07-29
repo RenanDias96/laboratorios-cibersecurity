@@ -1,12 +1,12 @@
-# 🔍 Análise Inicial de Exposição TR-069 em Ambiente ISP Real
+# Análise Inicial de Exposição TR-069 em Ambiente ISP Real
 
-📅 **Data da análise:** 03/06/2025  
-✍️ **Autor:** Renan Dias Mendes  
-🎯 **Objetivo:** Documentar e reportar a exposição de um painel ACS (TR-069) em ambiente de produção de um ISP, a partir da análise do tráfego entre um roteador doméstico e a rede da operadora.
+**Data da análise:** 03/06/2025  
+**Autor:** Renan Dias Mendes  
+**Objetivo:** Documentar e reportar a exposição de um painel ACS (TR-069) em ambiente de produção de um ISP, a partir da análise do tráfego entre um roteador doméstico e a rede da operadora.
 
 ---
 
-## 🧩 Etapa 0 – Fonte do Arquivo PCAP
+## 1 – Fonte do Arquivo PCAP
 
 - A captura foi feita na minha própria rede residencial, como cliente do ISP.
 - Durante a análise, identifiquei:
@@ -16,7 +16,7 @@
 
 ---
 
-## 🔧 Ambiente
+## Ambiente
 
 - **Host:** Máquina virtual (Ubuntu)
 - **Interface:** `enp0s3` (modo *bridge*)
@@ -25,41 +25,42 @@
 
 ---
 
-## 🛰️ Etapa 1 – Captura e Reconhecimento do Tráfego
+## 2 – Captura e Reconhecimento do Tráfego
 
-- Iniciado Wireshark na interface `enp0s3`.
-- Reiniciado o roteador para capturar todo o tráfego de boot.
-- Acesso à interface local do roteador: `http://192.168.1.1:8010` (credenciais padrão: user/user1234).
+- Iniciei o Wireshark na interface `enp0s3`.
+- Reiniciei o roteador para capturar todo o tráfego de boot.
+- Acessei à interface local do roteador: `http://192.168.1.1:8010` (credenciais padrão: user/user1234).
 - Captura pausada após carregamento completo.
 
 ![Painel](prints/1.png)
 ![Wireshark](prints/2.png)
 
-## 🗂️ Etapa 2 – Aplicação de Filtros e Identificação
+## 3 – Aplicação de Filtros e Identificação
 
-- Filtro `http.response` aplicado
-- Diversas requisições HTTP com dados sensíveis:
+- Utilizei o filtro `http.response`
+- Diversas requisições HTTP apareceram com dados sensíveis:
   - Modelo e firmware do roteador
   - Referências ao TR-069
   - URL de um servidor ACS
 
 ![Captura](prints/3.png)
+
 ---
 
-## 🔐 Etapa 3 – Teste da URL ACS
+## 4 – Teste da URL ACS
 
 ```bash
 curl -v http://<url_encontrada>
 ```
 - Retorno: HTTP/1.1 200 OK
 
-Servidor ACS respondeu normalmente via HTTP
+- Servidor ACS respondeu normalmente via HTTP
 
 - IP público visível na resposta
 
 ![Curl](prints/4.png)
 
-## 🧰 Etapa 4 – Teste da Porta 7547
+## 5 – Teste da Porta 7547
 
 ```bash
 curl -v http://<ip>:7547
@@ -70,7 +71,7 @@ curl -v http://<ip>:7547
 
 ![Porta 7547](prints/5.png)
 
-## 🌐 Etapa 5 – Acesso via Navegador
+## 6 – Acesso via Navegador
 
 Acesso direto ao IP:7547 exibiu o painel de login.
 
@@ -78,45 +79,44 @@ Painel sem HTTPS e sem autenticação robusta.
 
 ![Painel](prints/6.png)
 
-## 🧠 Reflexão Pessoal
+---
 
-Essa análise nasceu de uma curiosidade técnica, mas revelou uma falha de segurança.
-Minha intenção não é expor, mas construir e contribuir. Transformar observações técnicas em feedback prático e aplicável, sobretudo em ISPs com maturidade ainda em construção.
+## Reflexão Pessoal
 
-# 🧾 Resumo Técnico
+Essa análise nasceu de uma curiosidade em entender como funcionava a conexão entre roteador > ISP, mas revelou uma possível falha de segurança.
+Minha intenção não é expor, mas construir e contribuir.
 
-| Item                | Status                                 |
-|---------------------|----------------------------------------|
-| Painel ACS          | Acessível publicamente                 |
-| Porta 7547          | Aberta via HTTP (sem TLS)              |
-| Dados em trânsito   | Sem criptografia (modelo, firmware)    |
-| Autenticação        | Fraca ou inexistente                   |
+---
 
-## 📉 IOCs e Evidências Técnicas
+## IOCs
 
-- 🌐 IP público do ACS: XXX.XXX.XXX.XXX
+- IP público do ACS: XXX.XXX.XXX.XXX
 
-- 🔌 Porta ativa: 7547
+- Porta ativa: 7547
 
-- 🔓 Protocolo: HTTP (sem SSL/TLS)
+- Protocolo: HTTP (sem SSL/TLS)
 
-- 📤 Dados trafegados: Informações do dispositivo, ACS endpoint
+- Dados trafegados: Informações do dispositivo, ACS endpoint
 
-## 🛡️ Recomendações Técnicas
+---
 
-- 🚫 Bloquear o acesso externo ao painel ACS
+## Recomendações
 
-- 🔐 Habilitar HTTPS com certificado válido
+-  Bloquear o acesso externo ao painel ACS
 
-- 🔑 Implementar autenticação forte (hash + MFA)
+-  Habilitar HTTPS com certificado válido
 
-- 🔥 Restringir acesso à porta 7547 com firewall (whitelist)
+-  Implementar autenticação forte (hash + MFA)
 
-- 👁️ Monitorar varreduras externas com SIEM e IDS
+-  Restringir acesso à porta 7547 com firewall (whitelist)
 
-- ⚙️ Atualizar firmware e reforçar configurações seguras
+-  Monitorar varreduras externas com SIEM e IDS
 
-## 🌐 Referências Técnicas
+-  Atualizar firmware e reforçar configurações seguras
+
+---
+
+## Referências utilizadas para investigação
 
 [Fiberhome HG6145F](https://fiberhomebrasil.com.br/produtos/hg6145f/)
 
