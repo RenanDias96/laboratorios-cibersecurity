@@ -1,19 +1,19 @@
-# 🧰 Instalação e Configuração do Ambiente — Splunk + Suricata
+# Instalação e Configuração do Ambiente — Splunk + Suricata
 
-📅 **Data do ambiente:** 10/06/2025  
-🔎 Este documento apresenta o passo a passo completo para configurar o Suricata com uma regra personalizada e integrar os logs ao Splunk Enterprise para visualização em tempo real.
+**Data do ambiente:** 10/06/2025  
+Este documento apresenta o passo a passo completo para configurar o Suricata com uma regra personalizada e integrar os logs ao Splunk Enterprise para visualização em tempo real.
 
 ---
 
-## 📥 1. Instalação do Ambiente Geral
+## 1. Instalação do Ambiente Geral
 
 Antes de iniciar, siga o guia de instalação base:
 
-🔗 [Instalação do Ambiente Geral](../../../Instalacao-do-Ambiente-Geral/README.md)
+ [Instalação do Ambiente Geral](../../../Instalacao-do-Ambiente-Geral/README.md)
 
 ---
 
-## 📦 2. Instalação do Suricata
+## 2. Instalação do Suricata
 
 ```bash
 sudo add-apt-repository ppa:oisf/suricata-stable -y
@@ -22,7 +22,7 @@ sudo apt update -y
 
 ![Instalação](prints/1.png)
 
-## 📦 2.1 Instalação de Dependências
+##  2.1 Instalação de Dependências
 
 ```bash
 sudo apt install suricata jq tcpdump -y
@@ -30,7 +30,7 @@ suricata --build-info | grep 'Suricata'
 ```
 ![Dependencias](prints/2.png)
 
-## 📁 3. Criação da pasta rules e do arquivo local.rules
+## 3. Criação da pasta rules e do arquivo local.rules
 
 ```bash
 sudo mkdir -p /etc/suricata/rules
@@ -42,7 +42,7 @@ alert tcp any any -> any any (msg:"[TESTE] Alerta garantido"; sid:999999; rev:1;
 ```
 ![Local.rules](prints/3.png)
 
-## 🔧 4. Alteração no arquivo suricata.yaml
+## 4. Alteração no arquivo suricata.yaml
 
 ```bash
 cd /etc/suricata
@@ -58,13 +58,13 @@ rule-files:
 
 ![Yaml](prints/4.png)
 
-## 📒 5. Baixando um arquivo .pcap
-- 🔗 Download do .pcap — [Malware Traffic Analysis](https://malware-traffic-analysis.net/2025/03/10/index.html)
+##  5. Baixando um arquivo .pcap
+-  Download do .pcap — [Malware Traffic Analysis](https://malware-traffic-analysis.net/2025/03/10/index.html)
 - Senha: infected_20250310
 
 ![PCAP](prints/5.png)
 
-## 🧪 6. Testando o Suricata
+##  6. Testando o Suricata
 
 ```bash
 sudo suricata -r sample.pcap -l /var/log/suricata/
@@ -72,8 +72,8 @@ jq 'select(.event_type=="alert" and .alert.signature_id==999999)' /var/log/suric
 ```
 ![Teste Suricata](prints/6.png)
 
-## 📦 7. Instalando o Splunk Enterprise
-- 🔗 Site oficial do Splunk: [Splunk](https://www.splunk.com/en_us/download/splunk-enterprise.html)
+##  7. Instalando o Splunk Enterprise
+-  Site oficial do Splunk: [Splunk](https://www.splunk.com/en_us/download/splunk-enterprise.html)
 
 Registre-se, acesse o e-mail e baixe a versão .deb
 
@@ -89,7 +89,7 @@ sudo dpkg -i splunk-9.4.3-237ebbd22314-linux-amd64.deb
 ![wget](prints/9.png)
 ![dpkg](prints/10.png)
 
-## 🔧 8. Primeira Configuração
+##  8. Primeira Configuração
 
 ```bash
 sudo /opt/splunk/bin/splunk start --accept-license
@@ -105,7 +105,7 @@ Acesse via navegador:
 ![Localhost](prints/13.png)
 ![Painel](prints/14.png)
 
-## 🔁 9. Integração Suricata + Splunk
+##  9. Integração Suricata + Splunk
 Verifique a pasta /var/log/suricata/ e localize o arquivo eve.json
 
 ```bash
@@ -126,7 +126,7 @@ Adicionando ao Splunk:
 ![Conclusão](prints/22.png)
 
 
-## 📃 10. Leitura dos Logs no Splunk
+##  10. Leitura dos Logs no Splunk
 - Acesse: Search & Reporting
 ![Search](prints/23.png)
 
@@ -136,9 +136,9 @@ index=* source="/var/log/suricata/eve.json" event_type=alert
 
 ![Alertas](prints/24.png)
 
-## 🧱 11. Estrutura Final do Ambiente
-- ✅ Suricata instalado e funcional
-- ✅ Regras customizadas operacionais
-- ✅ Leitura e análise de .pcap com alertas
-- ✅ Splunk Enterprise instalado
-- ✅ Integração e leitura de alertas do Suricata no Splunk
+##  11. Estrutura Final do Ambiente
+-  Suricata instalado e funcional
+-  Regras customizadas operacionais
+-  Leitura e análise de .pcap com alertas
+-  Splunk Enterprise instalado
+-  Integração e leitura de alertas do Suricata no Splunk
