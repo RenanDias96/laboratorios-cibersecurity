@@ -4,8 +4,8 @@ Aplicar resposta manual a alertas do Suricata diretamente por um dashboard inter
 
 A ideia é ir além da detecção e exercitar o controle sobre a resposta, sem depender de soluções prontas como **TheHive ou Cortex.**
 
-- 📄 Documento criado por **Renan D M**
-- 🗓️ Atualizado em **25/07/2025**
+-  Documento criado por **Renan D M**
+-  Atualizado em **25/07/2025**
 
 ---
 
