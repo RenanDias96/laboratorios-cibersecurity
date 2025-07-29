@@ -1,67 +1,68 @@
 # 📄 Réplica Técnica à Resposta da Equipe do ACS
 
-Esta réplica apresenta **considerações complementares** aos pontos abordados, com base técnica e nos próprios trechos do documento oficial.
+Esta réplica traz pontos complementares à resposta oficial, com base nos próprios trechos apresentados e no cenário técnico observado durante os testes.
 
-> ⚠️ **Nota:** Esta réplica não busca atribuição de falhas ao software, mas sim reforçar os riscos observados na **configuração atual do ambiente do ISP**, conforme os testes autorizados.
+> O objetivo não é culpar o software em si, mas mostrar os riscos da configuração atual do ambiente, especialmente com acesso exposto à internet.
 
 ---
 
-## 🔍 Pontos Técnicos em Destaque
+## Pontos em Destaque
 
-### 1. ✅ CPEs “fantasmas” podem ser adicionados sem restrições
+### 1. Dispositivos “fantasma” realmente entram na plataforma
 
 > “Como não existe autenticação na comunicação CPE -> ACS, é sim possível que dispositivos ‘fantasma’ sejam adicionados à plataforma.”
 
-Essa confirmação reforça o ponto central da análise: **qualquer host pode iniciar a comunicação CWMP com o ACS, mesmo vindo da internet pública**, simulando o comportamento de uma CPE legítima.  
-Mesmo que esses dispositivos sejam excluídos por rotina, o **simples aceite e entrada no banco de dados já representa uma vulnerabilidade por design.**
+- Aqui está a confirmação de um dos principais riscos apontados: qualquer host pode se passar por uma CPE legítima e se registrar no ACS.
+- Mesmo que esse “fantasma” seja excluído depois, o fato de ser aceito já abre margem para abuso. Desde coleta de informações até exploração futura.
 
 ---
 
-### 2. ❗ Falta de autenticação e validação de origem são assumidas como normais
+### 2. Falta de autenticação é tratada como algo esperado
 
 > “Esse ataque não é capaz de expor dados sensíveis nem permite a configuração de outros dispositivos.”
 
-Mesmo com essas limitações, a ausência de autenticação e validação **permite fingerprinting, enumeração da estrutura interna do ACS e manipulação externa do banco de dados.**  
-Esse comportamento representa **vetor real de ataque**, já documentado em diversas campanhas automatizadas.
+- Mesmo que o ataque não vá direto a dados sensíveis, a ausência total de autenticação e validação de origem permite:  
+  - fingerprinting da aplicação
+  - coleta de dados sobre a estrutura interna
+  - entrada forçada de dispositivos falsos
+  - manipulação indireta do banco
+
+Essas são ações comprovadamente exploradas em campanhas automatizadas, e não podem ser tratadas como inofensivas.
 
 ---
 
-### 3. 🔓 Exposição via HTTP justificada por “compatibilidade”
+### 3. HTTP aberto justificado por “compatibilidade”
 
 > “Esse é o padrão por conta de modelos que não suportam conexão ao ACS com SSL/TLS.”
 
-Essa justificativa é compreensível do ponto de vista de compatibilidade, mas **frágil tecnicamente**:  
-**Portas CWMP em HTTP, sem criptografia ou autenticação**, são o **padrão explorado** por botnets como **Mirai**.
-
-> “A utilização de portas em HTTP é opcional.”
-
-⚠️ Mesmo sendo opcional, manter a porta **57547** em **HTTP** **expõe o ambiente ao risco de interceptação e ataques automatizados.**
+A justificativa é comum em ambientes legados, mas não segura.
+Expor CWMP em HTTP, especialmente em portas acessíveis via internet, é um risco conhecido e documentado, sendo alvo direto de botnets.
 
 ---
 
-### 4. 🛠️ Responsabilidade do provedor é reconhecida
+### 4. Responsabilidade do provedor é clara
 
 > “A responsabilidade pela exposição [...] pode ser feita na instalação do ACS ou posteriormente.”
 
-Isso confirma o foco do alerta: **o problema não está no sistema ACS, mas sim na configuração insegura do provedor**, que expôs a porta à internet pública **sem criptografia e sem autenticação.**
+Aqui fica claro que o problema não é o software ACS em si, mas a configuração feita pelo provedor.
+Deixar a porta aberta para a internet, sem criptografia nem autenticação, é uma falha grave de segurança na infraestrutura do ISP.
 
 ---
 
-### 5. 📡 Resposta 204 confirma parsing sem autenticação
+### 5. Resposta 204 confirma parsing sem autenticação
 
 > “A resposta HTTP 204 recebida foi o servidor interpretando a requisição como proveniente de uma CPE.”
 
 > “Mesmo quando o método não é válido, responde com código 2xx para evitar quebra de comunicação.”
 
-Isso reforça que o servidor **parseia e interpreta comandos SOAP mesmo sem autenticação**, comportamento **idêntico ao de ambientes explorados por CVEs como Mirai e Hajime.**
-
-Essa política de resposta “failsafe” **favorece o sucesso de scanners automatizados**, que **identificam o ACS como válido e prosseguem com ataques.**
+Isso mostra que o ACS aceita e interpreta comandos SOAP sem validar quem está mandando.
+Esse comportamento é igual ao que os CVEs descritos nos documentos anteriores.
 
 ---
 
-### 6. 📊 Tabela de CVEs comparadas (comportamento semelhante)
+### 6. CVEs com comportamento parecido
 
-Mesmo sem execução real, o parsing de payloads SOAP com resposta 204 **replica o comportamento explorado por CVEs conhecidas**:
+Mesmo que não haja execução de código, o parsing dessas requisições SOAP abre caminho para ataques conhecidos:
 
 | CVE               |                Vetor                                | Similaridade com Ambiente  |
 |-------------------|-----------------------------------------------------|----------------------------|
@@ -69,36 +70,17 @@ Mesmo sem execução real, o parsing de payloads SOAP com resposta 204 **replica
 | CVE-2014-9222     | Execução via CWMP sem validação de origem           | ✅ Moderada                |
 | CVE-2018-10562    | Interface CWMP exposta publicamente sem autenticação| ✅ Alta                    |
 
-> 🔎 O parsing sem autenticação, mesmo que sem execução real, **marca o ACS como alvo viável** para campanhas automatizadas.
+Ou seja, só o fato de aceitar essas requisições já torna o ACS um alvo legítimo para ataques automatizados.
 
 ---
 
-## ✅ Considerações Finais
+## Considerações finais
 
-A própria equipe responsável pelo ACS confirma que:
+A equipe confirma:
 
-- ❌ Não há autenticação entre CPE e ACS;
-- ✅ SOAPs arbitrários são parseados e respondidos;
-- 🔓 Porta HTTP permanece ativa por decisão de compatibilidade;
-- ⚠️ Segurança depende **inteiramente da configuração do provedor**, que **no ambiente testado, estava vulnerável**.
-
----
-
-## 🔐 Recomendações Reforçadas
-
-- 🔐 **Bloquear portas 7547 e 57547 na borda pública**, permitindo acesso apenas de IPs internos confiáveis.
-- 🔒 **Substituir HTTP por HTTPS**, com fallback controlado ou tunelamento via VPN.
-- 🧱 **Aplicar regras de firewall (iptables)** usando `connlimit`, `recent`, `psd`, etc.
-- 🧪 **Implementar autenticação mínima**, mesmo opcional, para novos dispositivos CPE.
-- 📈 **Habilitar logging e alertas em SIEM/Syslog** para SOAPs externos suspeitos.
-- 🧼 **Remover automaticamente CPEs inativos ou anômalos.**
-- 🕵️ **Revisar redes de origem autorizadas no ACS.**
-- 📶 **Isolar o ACS em VLAN/sub-rede dedicada com controle de fluxo.**
+- Não existe autenticação entre CPE e ACS
+- Comandos SOAP arbitrários são processados
+- A porta HTTP continua aberta por “compatibilidade”
+- A segurança depende 100% da configuração feita pelo provedor, que nesse caso falhou
 
 ---
-
-## 🙋‍♂️ Conclusão
-
-Coloco-me à disposição para esclarecimentos, apoio técnico ou colaboração na mitigação.
-
-> ✅ Toda análise foi conduzida com **transparência**, visando exclusivamente a **proteção dos ativos do ISP e dos usuários finais**.
