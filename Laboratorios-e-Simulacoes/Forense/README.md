@@ -17,7 +17,7 @@ Ferramentas usadas: Wireshark, tcpdump, YARA, PE-bear, DIE, FLOSS — entre outr
 
 ---
 
-## 🧩 Metodologia
+## Metodologia
 
 - Identificação de artefatos suspeitos**
 - Coleta e isolamento do material (PCAPs, executáveis, amostras)
