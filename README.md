@@ -4,7 +4,7 @@
   <img src="assets/soc.png" alt="Capa do Laboratório de Cibersegurança" width="800"/>
 </p>
 
-👋 Meu nome é Renan, e aqui você encontra minha trajetória na Segurança da Informação, com foco em **SOC, Threat Hunting e Resposta a Incidentes.**
+Meu nome é Renan, e aqui você encontra minha trajetória na Segurança da Informação, com foco em **SOC, Threat Hunting e Resposta a Incidentes.**
 
 Esse repositório é onde concentro tudo o que venho testando, analisando e aprendendo. Cada projeto aqui nasceu de uma dúvida real, de uma falha observada ou de uma curiosidade técnica.
 
@@ -23,7 +23,7 @@ Laboratórios práticos, análises forenses, detecção de ameaças, resposta a 
 
 - YARA, FLOSS, PE-bear, DIE
 
-- Nmap, Metasploit e por aí vai...
+- Nmap, Metasploit...
 
 ---  
                                    
@@ -34,9 +34,9 @@ Laboratórios práticos, análises forenses, detecção de ameaças, resposta a 
 
 ---
 
-## 📌  Alguns destaques
+## 📌  Destaques
 
-### 📡 Caso TR-069 – Investigação em Ambiente Real (ISP)
+### Caso TR-069 – Investigação em Ambiente Real (ISP)
 - [01 - Exposição Inicial](Projetos-Reais-e-Parcerias-Técnicas/01-Caso-TR069-Exposicao-ACS-ISP/01-Analise-Inicial-Exposicao/README.md): Análise de um servidor ACS exposto publicamente, sem criptografia e com autenticação fraca. Tudo flagrado em um ambiente real de provedor.
 
 - [02 - Vulnerabilidades em Requisições SOAP](Projetos-Reais-e-Parcerias-Técnicas/01-Caso-TR069-Exposicao-ACS-ISP/02-Analise-Tecnica-ACS-SOAP/README.md): Detalhamento das vulnerabilidades nas requisições SOAP e riscos de execução remota.
@@ -57,9 +57,9 @@ Laboratórios práticos, análises forenses, detecção de ameaças, resposta a 
 
 ---
 
-## ✉️ Fala comigo
+## Contato
 
-📫 LinkedIn: [Renan D M](https://www.linkedin.com/in/renan-dias-mendes-571926373/)
+📫 LinkedIn: [Renan Dias Mendes](https://www.linkedin.com/in/renan-dias-mendes-571926373/)
 ✉️ E-mail: renandmm96@gmail.com
 
 ---
