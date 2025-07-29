@@ -1,4 +1,4 @@
-# 📄 Réplica Técnica à Resposta da Equipe do ACS
+#  Réplica à Resposta da Equipe do ACS
 
 Esta réplica traz pontos complementares à resposta oficial, com base nos próprios trechos apresentados e no cenário técnico observado durante os testes.
 
