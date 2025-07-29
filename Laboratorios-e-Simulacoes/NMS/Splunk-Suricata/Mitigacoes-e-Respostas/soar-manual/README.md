@@ -27,7 +27,7 @@ A ideia é ir além da detecção e exercitar o controle sobre a resposta, sem d
 
 ---
 
-## 📁 Etapa 1 – Criação do Lookup CSV
+## 1 – Criação do Lookup CSV
 
 ```bash
 cd /opt/splunk/etc/apps/search/lookups
