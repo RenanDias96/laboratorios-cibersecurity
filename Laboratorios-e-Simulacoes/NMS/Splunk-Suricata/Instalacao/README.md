@@ -1,13 +1,13 @@
 # Instalação e Configuração do Ambiente — Splunk + Suricata
 
 **Data do ambiente:** 10/06/2025  
-Este documento apresenta o passo a passo completo para configurar o Suricata com uma regra personalizada e integrar os logs ao Splunk Enterprise para visualização em tempo real.
+Esse é o passo a passo completo para configurar o Suricata com uma regra personalizada e integrar os logs ao Splunk Enterprise para visualização em tempo real.
 
 ---
 
 ## 1. Instalação do Ambiente Geral
 
-Antes de iniciar, siga o guia de instalação base:
+Antes de iniciar, confira a configuração geral utilizada:
 
  [Instalação do Ambiente Geral](../../../Instalacao-do-Ambiente-Geral/README.md)
 
