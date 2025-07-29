@@ -4,58 +4,49 @@
   <img src="../../../assets/soc.png" alt="Capa do Laboratório de Cibersegurança" width="800"/>
 </p>
 
-Esta pasta documenta a integração entre duas ferramentas robustas: **Suricata**, um sistema de detecção de intrusão (IDS), e **Splunk**, uma poderosa plataforma de análise e correlação de logs.
+Este projeto documenta a integração entre o Suricata (IDS) e o Splunk (SIEM) para construção de um ambiente funcional de monitoramento e resposta a incidentes em redes locais.
 
-A união dessas ferramentas forma um ambiente funcional de **Network Monitoring System (NMS)** e **Security Operations Center (SOC)**, voltado para:
+A proposta é simular, detectar e reagir a ameaças, usando ferramentas amplamente utilizadas em ambientes corporativos.
 
-- 🚨 **Detecção de ameaças em tempo real**
-- 🔍 **Análise detalhada de tráfego**
-- 📈 **Visualização e correlação de eventos**
-- 🛡️ **Resposta ativa a incidentes**
+---
+## O que você vai encontrar aqui:
+
+- Detecção em tempo real de comportamentos suspeitos
+- Análise de tráfego e alertas gerados pelo IDS
+- Dashboards de visualização no Splunk
+- Estratégias de resposta e mitigação com firewall e scripts
 
 ---
 
-## 🛠️ Por que Splunk + Suricata?
+## Por que essa integração?
 
-🔹 **Suricata** permite a inspeção profunda de pacotes (DPI), com suporte a regras personalizadas e decodificação de protocolos.  
-🔹 **Splunk** atua como SIEM, centralizando e visualizando os alertas em dashboards analíticos e acionáveis.  
-
-A integração permite capturar eventos gerados pelo Suricata e exibi-los em tempo real no Splunk, viabilizando um fluxo eficiente de **detecção → análise → resposta.**
+- Suricata: faz inspeção profunda de pacotes, suporta regras customizadas, detecta desde portscan até payloads suspeitos.
+- Splunk: organiza e exibe os alertas em tempo real, com filtros, painéis e buscas para facilitar a análise.
+Juntos, formam um pipeline completo: detecção → visualização → resposta.
 
 ---
 
-## 🧱 Estrutura da Pasta
+## Estrutura da Pasta
 
 | Pasta                        |                     Finalidade                                                     |
 |------------------------------|------------------------------------------------------------------------------------|
-|  [Instalacao](Instalacao/README.md)                | Instalação do ambiente com Suricata + Splunk, incluindo forwarders e dependências. |
+|  [Instalacao](Instalacao/README.md)                | Instalação do ambiente com Suricata + Splunk e dependências. |
 |  [Regras-e-Alertas](Regras-e-Alertas/README.md)          | Regras personalizadas Suricata e exemplos de eventos detectados (portscan, etc).   |
-|  [Mitigacoes-e-Respostas](Mitigacoes-e-Respostas/README.md)    | Estratégias de resposta após detecção: bloqueios, automação, firewall, etc.        |
+|  [Mitigacoes-e-Respostas](Mitigacoes-e-Respostas/README.md)    | Resposta após detecção: bloqueios, automação, firewall, etc.        |
 
-> 📌 As detecções práticas (ex: varredura de portas) são explicadas em seus próprios `README.md` nas subpastas.
-
----
-
-## 🚧 Em Desenvolvimento
-
-Este ambiente será expandido com novos cenários de ataque e defesa:
-
-- 📦 Novas regras de detecção para ataques específicos
-- 📡 Integração com dashboards visuais em Splunk
-- 🤖 Scripts automatizados de mitigação
-- 🔗 Correlação com outras ferramentas (ex: Zeek, Wazuh, Elastic)
+> Cada subpasta tem seu próprio README explicando o contexto, o cenário simulado e os resultados obtidos.
 
 ---
 
-## 🧪 Objetivo do Projeto
+## Em Desenvolvimento
 
-> Criar uma base sólida e prática para **investigação, resposta e mitigação de ameaças de rede**, especialmente em ambientes simulados e redes locais.
+- Novas regras de detecção (ex: C2, brute force, exfiltração)
+- Integrações com dashboards mais visuais
+- Scripts de resposta automática
+- Conexões futuras com Zeek, Wazuh e Elastic Stack
 
 ---
 
 ## ⚠️ Aviso
 
-Todos os testes foram conduzidos em laboratório controlado. As ferramentas são open source e a finalidade é exclusivamente **educacional e técnica.**
-
----
-
+> Todos os testes foram feitos em ambiente de laboratório, isolado da internet. O conteúdo é técnico, prático e com finalidade exclusivamente educacional.
