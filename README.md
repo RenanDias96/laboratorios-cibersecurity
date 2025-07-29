@@ -29,12 +29,12 @@ Laboratórios práticos, análises forenses, detecção de ameaças, resposta a 
                                    
 | Seção                                                                 | Descrição                                                                                 |
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [🔬 Laboratórios e Simulações](Laboratorios-e-Simulacoes/README.md)   | 	Ambientes simulados, varreduras, ataques controlados e detecções em tempo real.                 |
-| [🛠️ Projetos Reais e Parcerias Técnicas](Projetos-Reais-e-Parcerias-Técnicas/README.md) | Investigações em ambientes reais — com exposição de falhas e réplicas técnicas. |
+| [Laboratórios e Simulações](Laboratorios-e-Simulacoes/README.md)   | 	Ambientes simulados, varreduras, ataques controlados e detecções em tempo real.                 |
+| [Projetos Reais e Parcerias Técnicas](Projetos-Reais-e-Parcerias-Técnicas/README.md) | Investigações em ambientes reais — com exposição de falhas e réplicas técnicas. |
 
 ---
 
-## 📌  Destaques
+## Destaques
 
 ### Caso TR-069 – Investigação em Ambiente Real (ISP)
 - [01 - Exposição Inicial](Projetos-Reais-e-Parcerias-Técnicas/01-Caso-TR069-Exposicao-ACS-ISP/01-Analise-Inicial-Exposicao/README.md): Análise de um servidor ACS exposto publicamente, sem criptografia e com autenticação fraca. Tudo flagrado em um ambiente real de provedor.
