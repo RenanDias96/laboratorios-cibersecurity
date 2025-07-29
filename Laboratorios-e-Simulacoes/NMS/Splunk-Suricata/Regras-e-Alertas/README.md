@@ -1,16 +1,12 @@
-# 🧠 Regras e Alertas — Detecção Personalizada com Suricata
+#  Regras e Alertas — Detecção Personalizada com Suricata
 
 <p align="center">
   <img src="../../../../assets/alertas.png" alt="Capa Alertas" width="800"/>
 </p>
 
-Esta pasta reúne **regras personalizadas para o IDS Suricata** com foco na detecção de comportamentos maliciosos em rede, como portscans, explorações de protocolo e tráfego anômalo.
-
-Cada PoC é testada em ambiente controlado com **geração de tráfego simulada** e visualização em tempo real no **Splunk**, permitindo avaliar a eficácia das regras e sua aplicabilidade prática em NMS/SOC.
+Esta seção reúne regras criadas para o Suricata, voltadas à detecção em rede como portscans, exploração de protocolos e tráfego suspeito. Cada PoC foi testada em ambiente controlado, com geração de tráfego simulada e visualização dos alertas no Splunk.
 
 ---
-
-## 📦 Estrutura Atual
 
 | PoC                         | Descrição                                                                                                                                      |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -18,40 +14,30 @@ Cada PoC é testada em ambiente controlado com **geração de tráfego simulada*
 
 ---
 
-## 🧩 Metodologia de Testes
+## Metodologia dos Testes
 
-1. 🎯 **Criação da regra Suricata personalizada**
-2. 🧪 **Simulação do ataque** via ferramentas como `nmap`, `hping3` ou scripts próprios
-3. 🔍 **Captura e análise** do tráfego com Wireshark e tcpdump
-4. 📊 **Visualização e correlação** no Splunk com alertas e dashboards
-5. 📁 **Documentação técnica** com prints, comandos e conclusões
-
----
-
-## ✅ Benefícios da Detecção Customizada
-
-- Adaptação às particularidades da rede (ISPs, empresas, infra interna, honeypots)
-- Maior visibilidade sobre ataques em fases iniciais (reconhecimento)
-- Base para **respostas automatizadas** e playbooks de mitigação
+- Criação da regra no Suricata
+- Simulação do tráfego malicioso (Nmap, hping3, scripts customizados)
+- Captura e análise com Wireshark e tcpdump
+- Visualização no Splunk com dashboards e alertas
+- Documentação com prints, comandos e observações técnicas
 
 ---
 
-## 🚧 Em Desenvolvimento
+## Próximas Regras em Desenvolvimento
 
-As próximas regras a serem adicionadas incluem:
-
-- 🚀 Exploração de protocolos (ex: HTTP malformed, DNS tunneling)
-- 🐍 Tráfego anômalo (ex: beaconing, C2)
-- 🧬 Regras baseadas em comportamento (ex: velocidade, repetição, burst)
+- Exploração de protocolos (ex: HTTP malformed, DNS tunneling)
+- Tráfego anômalo (beaconing, C2)
+- Padrões comportamentais (ex: bursts de conexão, repetição suspeita)
 
 ---
 
-## 🧪 Ambientes Utilizados
+## Ambiente Utilizado
 
-- **Suricata** como IDS
-- **Splunk Enterprise** como SIEM
-- **2 VMs** em modo bridge (ataque e monitoramento)
-- **Ferramentas auxiliares**: Wireshark, Nmap, tcpdump, Kali Linux entre outras.
+- IDS: Suricata
+- SIEM: Splunk Enterprise
+- Máquinas virtuais em modo bridge (monitoramento e ataque)
+- Ferramentas de apoio: Wireshark, Nmap, tcpdump, Kali Linux e outras
 
 ---
 
