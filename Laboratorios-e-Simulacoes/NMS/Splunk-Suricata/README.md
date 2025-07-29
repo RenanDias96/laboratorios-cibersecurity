@@ -1,4 +1,4 @@
-# 📊 Splunk + Suricata — Integração IDS + SIEM para Monitoramento de Rede
+# Splunk + Suricata — Integração IDS + SIEM para Monitoramento de Rede
 
 <p align="center">
   <img src="../../../assets/soc.png" alt="Capa do Laboratório de Cibersegurança" width="800"/>
@@ -25,8 +25,6 @@ A proposta é simular, detectar e reagir a ameaças, usando ferramentas amplamen
 Juntos, formam um pipeline completo: detecção → visualização → resposta.
 
 ---
-
-## Estrutura da Pasta
 
 | Pasta                        |                     Finalidade                                                     |
 |------------------------------|------------------------------------------------------------------------------------|
