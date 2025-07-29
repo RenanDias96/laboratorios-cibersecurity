@@ -1,9 +1,9 @@
-# 🛠️ Instalação e Configuração Geral do Ambiente
+#  Instalação e Configuração Geral do Ambiente
 
-- 💡 Guia completo para configuração de ambiente base em Ubuntu 22.04 Desktop utilizado nos laboratórios.
+-  Passo a passo completo para configuração do ambiente com Ubuntu 22.04 Desktop utilizado nos labs.
 
-## 📥 1. Baixando e Instalando o Ubuntu 22.04  
-📅 Data: 25/05/2025
+##  1. Baixando e Instalando o Ubuntu 22.04  
+ Data: 25/05/2025
 
 - Acesse: [https://releases.ubuntu.com/jammy](https://releases.ubuntu.com/jammy)
 
@@ -19,7 +19,9 @@
 ![Instalação 1](prints/4.png) 
 ![Instalação 2](prints/4.png) 
 
-## 🔐 2. Corrigindo Permissões de Sudo
+---
+
+##  2. Corrigindo Permissões de Sudo
 
 - Teste o comando:
 
@@ -52,10 +54,11 @@ reboot
 ![Root Prompt](prints/10.png)
 ![Sudo OK](prints/11.png)
 
-
 Reinicie a VM normalmente e teste o comando sudo -i
 
-⌨️ 3. Configurações de Teclado e Clipboard
+---
+
+ ## 3. Configurações de Teclado e Clipboard
 
 Vá até Settings > Keyboard e altere o idioma:
 
@@ -63,7 +66,7 @@ Vá até Settings > Keyboard e altere o idioma:
 
 ![Teclado PT-BR](prints/13.png)
 
-🗌 Habilitando Copiar e Colar (shared clipboard)
+-  Habilitando Copiar e Colar (shared clipboard)
 
 No VirtualBox, com a VM desligada, vá em:
 
@@ -71,7 +74,9 @@ Configurações > Geral > Avançado > Área de transferência: Bidirecional
 
 ![Clipboard](prints/14.png)
 
-📀 4. Instalação dos Adicionais para Convidado
+---
+
+## 4. Instalação dos Adicionais para Convidado
 
 Inicie a VM e no menu superior clique em:
 
@@ -90,20 +95,21 @@ sudo ./VBoxLinuxAdditions.run
 ![Instalando headers](prints/15.png)
 ![Finalizando a instalação](prints/16.png)
 
-
 Reinicie a VM após a instalação.
 
-📦 5. Instalação Curl
+---
+
+## 5. Instalação Curl
 
 ```bash
 sudo apt install curl -y
 ```
+---
 
-## 🧱 Estrutura Final do Ambiente
-- ✅ Ubuntu 22.04 instalado
-- ✅ Permissões sudo funcionando
-- ✅ Teclado em português configurado
-- ✅ Copiar/colar entre host e VM ativo
-- ✅ Curl instalado
-- ✅ Adicionais para Convidado aplicados
-
+## Estrutura Final do Ambiente
+-  Ubuntu 22.04 instalado
+-  Permissões sudo funcionando
+-  Teclado em português configurado
+-  Copiar/colar entre host e VM ativo
+-  Curl instalado
+-  Adicionais para Convidado aplicados
