@@ -1,11 +1,10 @@
-# 🧰 Instalação e Configuração: Wireshark + Tcpdump
+# Instalação e Configuração: Wireshark + Tcpdump
 
-📅 **Data da instalação:** 02/06/2025  
-💡 Guia rápido para instalação e teste do ambiente de captura e análise de pacotes com Wireshark e Tcpdump.
+**Data da instalação:** 02/06/2025  
 
 ---
 
-## 📥 1. Pré-Requisito
+## 1. Pré-Requisito
 
 Antes de iniciar, siga o guia abaixo para configurar o ambiente geral da máquina:
 
@@ -13,7 +12,7 @@ Antes de iniciar, siga o guia abaixo para configurar o ambiente geral da máquin
 
 ---
 
-## 📦 2. Instalação do Wireshark e Tcpdump
+## 2. Instalação do Wireshark e Tcpdump
 
 Execute o comando no terminal:
 
@@ -26,17 +25,19 @@ Selecione "Yes" e pressione Enter.
 
 ![Confirmação](prints/1.png)
 
+---
 
-## 🗂️ 3. Criação dos Diretórios de Trabalho
-Para manter o laboratório organizado, crie a seguinte estrutura de pastas:
+##  3. Criação dos Diretórios de Trabalho
+- Para manter o laboratório organizado, crie a seguinte estrutura de pastas:
 
 ```bash
 mkdir -p ~/Desktop/network-lab/pcaps ~/Desktop/network-lab/analises
 ```
 ![Pasta](prints/2.png)
 
+---
 
-## 🚀 4. Testes de Execução
+##  4. Testes de Execução
 Verifique se o Wireshark foi instalado corretamente:
 
 ```bash
@@ -45,7 +46,7 @@ sudo wireshark
 ![Wireshark](prints/3.png)
 
 
-Verifique o funcionamento do Tcpdump:
+- Verifique o funcionamento do Tcpdump:
 
 ```bash
 sudo tcpdump
@@ -53,12 +54,13 @@ sudo tcpdump
 
 ![Tcpdump](prints/4.png)
 
+---
 
-## 🧱 5. Estrutura Final do Ambiente
-- ✅ Wireshark funcional com interface gráfica
-- ✅ Tcpdump funcional via terminal
-- ✅ Diretórios organizados em ~/Desktop/network-lab
-- ✅ Permissões corretas com sudo
-- ✅ Ambiente Linux com suporte a teclado pt-BR e copiar/colar
+##  5. Estrutura Final do Ambiente
+- Wireshark funcional com interface gráfica
+- Tcpdump funcional via terminal
+- Diretórios organizados em ~/Desktop/network-lab
+- Permissões corretas com sudo
+- Ambiente Linux com suporte a teclado pt-BR e copiar/colar
 
 
