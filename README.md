@@ -1,66 +1,69 @@
-# 🛡️ Laboratórios de Cibersegurança – Renan Dias Mendes
+# Laboratórios de Cibersegurança – Renan Dias Mendes
 
 <p align="center">
   <img src="assets/soc.png" alt="Capa do Laboratório de Cibersegurança" width="800"/>
 </p>
 
-👋 Olá! Meu nome é **Renan Dias Mendes**, profissional em transição para a área de **cibersegurança**, com foco em **SOC, Threat Hunting** e **Resposta a Incidentes**.
+👋 Meu nome é Renan, e aqui você encontra minha trajetória na Segurança da Informação, com foco em **SOC, Threat Hunting e Resposta a Incidentes.**
+
+Esse repositório é onde concentro tudo o que venho testando, analisando e aprendendo. Cada projeto aqui nasceu de uma dúvida real, de uma falha observada ou de uma curiosidade técnica.
 
 --- 
 
-## 🚀 Objetivo do Repositório
-Este repositório tem como objetivo reunir e documentar as experiências e aprendizados da área de cibersegurança. O foco está em análises forenses, detecção de ameaças, resposta a incidentes e mitigações de vulnerabilidades, com ênfase na criação de soluções customizadas. Aqui, compartilho minhas descobertas, soluções técnicas e metodologias, visando contribuir com a comunidade e aprimorar minha jornada profissional.
+## 🚀 O que você vai encontrar aqui
+Laboratórios práticos, análises forenses, detecção de ameaças, resposta a incidentes e testes em ambientes reais. Sempre com ferramentas open-source, metodologia clara e documentação técnica feita na unha.
 
 ---
 
-## 🧰 Tecnologias e Ferramentas
+## 🧰 Ferramentas que utilizo
 
-Ferramentas utilizadas nos labs e projetos:
+- Wireshark, tcpdump, Zeek
 
-- **Wireshark**, **tcpdump**, **Zeek**  
-- **Suricata**, **Splunk**  
-- **YARA**, **FLOSS**, **PE-bear**, **DIE**  
-- **curl**, **Nmap**  
-- *(Entre outras que serão adicionadas futuramente)*
+- Suricata, Splunk
+
+- YARA, FLOSS, PE-bear, DIE
+
+- Nmap, Metasploit e por aí vai...
 
 ---
 
-## 📁 Seções Principais          
+## 📁 Estrutura do repositório         
                                    
 | Seção                                                                 | Descrição                                                                                 |
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [🔬 Laboratórios e Simulações](Laboratorios-e-Simulacoes/README.md)   | Análises técnicas baseadas em ambientes simulados e situações realistas.                  |
-| [🛠️ Projetos Reais e Parcerias Técnicas](Projetos-Reais-e-Parcerias-Técnicas/README.md) | Estudos em ambientes reais com exposição de falhas e mitigação técnica. |
+| [🔬 Laboratórios e Simulações](Laboratorios-e-Simulacoes/README.md)   | 	Ambientes simulados, varreduras, ataques controlados e detecções em tempo real.                 |
+| [🛠️ Projetos Reais e Parcerias Técnicas](Projetos-Reais-e-Parcerias-Técnicas/README.md) | Investigações em ambientes reais — com exposição de falhas e réplicas técnicas. |
 
 ---
 
-## 📌 Destaques Técnicos
+## 📌  Alguns destaques
 
 ### 💼 Projetos Reais
 
 ### 📡 Caso TR-069 – Exposição de ACS em ISP real
-- 🔍 [01 - Análise Inicial e Exposição](Projetos-Reais-e-Parcerias-Técnicas/01-Caso-TR069-Exposicao-ACS-ISP/01-Analise-Inicial-Exposicao/README.md): Exposição de servidor ACS sem criptografia e autenticação inadequada.
+- 🔍 [01 - Exposição Inicial](Projetos-Reais-e-Parcerias-Técnicas/01-Caso-TR069-Exposicao-ACS-ISP/01-Analise-Inicial-Exposicao/README.md): Análise de um servidor ACS exposto publicamente, sem criptografia e com autenticação fraca. Tudo flagrado em um ambiente real de provedor.
 
-- 🛰️ [02 - Análise Técnica: ACS e Requisições SOAP](Projetos-Reais-e-Parcerias-Técnicas/01-Caso-TR069-Exposicao-ACS-ISP/02-Analise-Tecnica-ACS-SOAP/README.md): Detalhamento das vulnerabilidades nas requisições SOAP e riscos de execução remota.
+- 🛰️ [02 - Vulnerabilidades em Requisições SOAP](Projetos-Reais-e-Parcerias-Técnicas/01-Caso-TR069-Exposicao-ACS-ISP/02-Analise-Tecnica-ACS-SOAP/README.md): Detalhamento das vulnerabilidades nas requisições SOAP e riscos de execução remota.
 
-- 📄 [05 - Réplica Técnica ao ACS](Projetos-Reais-e-Parcerias-Técnicas/01-Caso-TR069-Exposicao-ACS-ISP/05-Replica-Tecnica/README.md): Resposta técnica à análise da equipe do ACS, destacando pontos críticos e sugerindo melhorias de segurança.
+- 📄 [05 - Réplica Técnica ao ACS](Projetos-Reais-e-Parcerias-Técnicas/01-Caso-TR069-Exposicao-ACS-ISP/05-Replica-Tecnica/README.md): Documento-resposta à análise da equipe responsável, reforçando os riscos encontrados e propondo medidas segurança.
 
 ### ☠️ Análises de Malware
 
-- 🧪 [Botnet IRC + SSH via PCAP](Laboratorios-e-Simulacoes/Forense/Wireshark-Tcpdump/Analise-de-Malware/01-Botnet-IRC-SSH/README.md): Análise forense de tráfego capturado com Wireshark e Tcpdump, identificando comunicação de botnet utilizando IRC e SSH. A análise inclui a extração de indicadores de compromisso (IOCs) e técnicas de exfiltração de dados.
+- 🧪 [Botnet IRC + SSH via PCAP](Laboratorios-e-Simulacoes/Forense/Wireshark-Tcpdump/Analise-de-Malware/01-Botnet-IRC-SSH/README.md): Tráfego capturado de botnet usando IRC como C2 e persistência por SSH. A análise foca em IOCs, técnicas de exfiltração e comportamento da ameaça.
 
-- 🔬 [AgentTesla (.NET) – Análise Estática + YARA](Laboratorios-e-Simulacoes/Forense/Yara-PEBear-Die-Floss/Analise-de-Malware/01-AgentTesla/README.md): Processo de engenharia reversa do malware AgentTesla, incluindo análise de código com PE-bear, DIE e FLOSS. Construção de regras YARA para detectar comportamentos relacionados a persistência e evasão.
+- 🔬 [AgentTesla (.NET) – Análise Estática + YARA](Laboratorios-e-Simulacoes/Forense/Yara-PEBear-Die-Floss/Analise-de-Malware/01-AgentTesla/README.md): Reversão manual de sample da família AgentTesla com ferramentas como PE-bear, DIE e FLOSS. A análise resultou em uma regra YARA construída na mão pra detectar variantes com foco em persistência, evasão e execução de scripts.
 
 ### 📊 SIEM & Regras Customizadas
 
-- 📈 [Detecção de Portscan com Suricata + Splunk](Laboratorios-e-Simulacoes/NMS/Splunk-Suricata/Regras-e-Alertas/01-Portscan/README.md)
-- 📈 [SOAR Manual com Suricata + Splunk e Backend em Flask + Iptables](Laboratorios-e-Simulacoes/NMS/Splunk-Suricata/Mitigacoes-e-Respostas/soar-manual/README.md)
+- 📈 [Detecção de Portscan com Suricata + Splunk](Laboratorios-e-Simulacoes/NMS/Splunk-Suricata/Regras-e-Alertas/01-Portscan/README.md):  Regras personalizadas para identificar portscans (SYN, FIN, NULL, XMAS, UDP) em tempo real com visualização no Splunk.
+
+- 📈 [SOAR Manual com Suricata + Splunk e Backend em Flask + Iptables](Laboratorios-e-Simulacoes/NMS/Splunk-Suricata/Mitigacoes-e-Respostas/soar-manual/README.md): Resposta a incidentes feita do zero: alertas do Suricata vão para o Splunk, que aciona um backend Flask e aguarda a decisão de bloquear ou passar via iptables.
 
 ---
 
-## ✉️ Contato
+## ✉️ Fala comigo
 
-📫 Conecte-se comigo no LinkedIn: [Renan D M](https://www.linkedin.com/in/renan-dias-mendes-571926373/)
+📫 LinkedIn: [Renan D M](https://www.linkedin.com/in/renan-dias-mendes-571926373/)
 ✉️ E-mail: renandmm96@gmail.com
 
 ---
