@@ -1,42 +1,32 @@
-# 🛡️ Mitigações e Respostas — Ações Defensivas no Suricata
+# Mitigações e Respostas
 
 <p align="center">
   <img src="../../../../assets/construcao.png" alt="Em construção" width="800"/>
 </p>
 
-Esta pasta é dedicada à implementação de **respostas práticas e automáticas a eventos detectados**, com foco em ambientes que utilizam **Suricata como IDS/IPS** e **integração com ferramentas como Splunk ou firewall locais**.
+Esta seção é dedicada à implementação de respostas manuais e automáticas utilizando o Suricata como IDS/IPS e ferramentas como Splunk, iptables e scripts personalizados.
 
-O objetivo é transformar alertas em ações reais de contenção e mitigação — desde o simples **drop de tráfego malicioso**, até **respostas condicionais a PoCs mais sofisticadas**.
+A proposta é transformar alertas em ações de contenção e mitigação, desde o bloqueio de tráfego até respostas condicionais mais avançadas.
 
 ---
 
-## ⚙️ Objetivos da Seção
+## Objetivos
 
-- 🧱 Criar políticas reativas com **Suricata em modo IPS (inline)**  
-- 🔥 Integrar com **iptables/firewalld** para bloqueios dinâmicos
-- 🤖 Simular **respostas automatizadas** a ataques (portscan, beaconing, etc.)
-- 🧩 Estudar integração com **scripts externos**, **SOAR** e pipelines de resposta
+- Desenvolver políticas reativas com Suricata em modo IPS
+- Integrar com iptables ou firewall para bloqueios dinâmicos
+- Simular respostas a eventos como portscans e beaconing
+- Testar integração com scripts externos, SOARs e automações de resposta
 
 ---
 
 | Tópico                                        | Descrição                                                                                       |
 |-----------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [SOAR Manual com Flask e Iptables](soar-manual/README.md)            | Controle de resposta a incidentes por botão, com backend em Flask e bloqueio via iptables       |
+| [SOAR Manual com Flask e Iptables](soar-manual/README.md)            | Backend em Flask controlando respostas via botões e aplicação de bloqueios       |
 
 ---
 
-## 📌 Considerações
-
-> A proposta desta seção é avançar para um modelo **reativo**, saindo da simples detecção passiva. O foco é explorar ao máximo os recursos do Suricata em modo ativo, mas sempre com **cuidado para evitar falsos positivos e impactos na operação legítima da rede**.
-
----
-
-## 🧪 Ambiente Sugerido
-
-- Suricata operando com `NFQUEUE` ou modo IPS
-- Firewall Linux com `iptables` configurado
-- Scripts auxiliares (ex: bloqueio automático com `fail2ban`, integração Python/Bash)
-- Simulações controladas via `nmap`, `hping3` e tráfego realístico
+## Considerações
+O foco aqui é sair do modelo passivo e evoluir para um ambiente reativo, utilizando o Suricata em modo ativo. A prioridade é contenção rápida, mas sempre com atenção a falsos positivos e impacto na rede.
 
 ---
 
