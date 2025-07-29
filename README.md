@@ -38,9 +38,7 @@ Laboratórios práticos, análises forenses, detecção de ameaças, resposta a 
 
 ## 📌  Alguns destaques
 
-### 💼 Projetos Reais
-
-### 📡 Caso TR-069 – Exposição de ACS em ISP real
+### 📡 Caso TR-069 – Investigação em Ambiente Real (ISP)
 - 🔍 [01 - Exposição Inicial](Projetos-Reais-e-Parcerias-Técnicas/01-Caso-TR069-Exposicao-ACS-ISP/01-Analise-Inicial-Exposicao/README.md): Análise de um servidor ACS exposto publicamente, sem criptografia e com autenticação fraca. Tudo flagrado em um ambiente real de provedor.
 
 - 🛰️ [02 - Vulnerabilidades em Requisições SOAP](Projetos-Reais-e-Parcerias-Técnicas/01-Caso-TR069-Exposicao-ACS-ISP/02-Analise-Tecnica-ACS-SOAP/README.md): Detalhamento das vulnerabilidades nas requisições SOAP e riscos de execução remota.
