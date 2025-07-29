@@ -1,27 +1,29 @@
-# 🛡️ Mitigação Manual de Alertas com Splunk + Flask + iptables (SOAR Manual Generalista)
+# Mitigação Manual de Alertas com Splunk + Flask + iptables
 
-🎯 **Objetivo:** Realizar resposta manual a alertas detectados pelo Suricata, via dashboard interativo no Splunk integrado a um backend Flask que aplica bloqueios com white/blacklist em tempo real usando ipset e iptables. A ideia é compreender de forma mais aprofundada a manipulação dos eventos recebidos pelo Splunk ao invés de simplesmente integrar com uma solução já pronta como **TheHive+Cortex**
+Aplicar resposta manual a alertas do Suricata diretamente por um dashboard interativo no Splunk. Os comandos são enviados a um backend Flask, que atualiza listas de bloqueio (ipset) em tempo real, aplicando as regras via iptables.
+
+A ideia é ir além da detecção e exercitar o controle sobre a resposta, sem depender de soluções prontas como **TheHive ou Cortex.**
 
 - 📄 Documento criado por **Renan D M**
 - 🗓️ Atualizado em **25/07/2025**
 
 ---
 
-## 🔗 Ferramentas Utilizadas
+## Ferramentas Utilizadas
 
-- 📊 Splunk Enterprise
+- Splunk 
 
-- 🧱 Suricata IDS
+- Suricata
 
-- 🌐 Flask
+- Flask
 
-- ⛔ iptables + ipset
+- iptables + ipset
 
 ---
 
-## ⚙️ Requisitos Iniciais
+## Requisitos Iniciais
 
-- 🔍 VM 1: Suricata + Splunk + Flask 
+- VM 1: Suricata + Splunk + Flask 
 
 ---
 
@@ -46,7 +48,7 @@ sudo chown vboxuser:vboxuser /opt/splunk/etc/apps/search/lookups/
 
 ---
 
-## 📦 Etapa 2 – Registro do Lookup no Splunk
+##  2 – Registro do Lookup no Splunk
 
 - Acesse: Settings > Lookups > Lookup table files > Add new
 
@@ -58,7 +60,7 @@ sudo chown vboxuser:vboxuser /opt/splunk/etc/apps/search/lookups/
 
 ---
 
-## 🔎 Etapa 3 – Criação do Dashboard Interativo
+## 3 – Criação do Dashboard Interativo
 
 - Acesse a aba search e utilize o filtro de busca:
 
@@ -128,7 +130,7 @@ Cole o código abaixo:
 
 ---
 
-## 🌐 Etapa 4 – Backend Flask 
+## 4 – Backend Flask 
 
 - Crie uma pasta em /opt e um arquivo para o flask
 
@@ -211,14 +213,14 @@ if __name__ == '__main__':
 ```
 ---
 
-## 🧱 Etapa 5 – Instalação dos Pacotes
+## 5 – Instalação dos Pacotes
 - Instale as dependências:
 ```bash
 sudo apt install flask iptables ipset
 ```
 ---
 
-## ⛔ Etapa 6 – Criação das Listas
+## 6 – Criação das Listas
 
 - Whitelist com 10min e black com 1h
 
@@ -229,7 +231,7 @@ sudo ipset create blacklist hash:ip timeout 3600
 
 ---
 
-## 🚀 Etapa 7 – Execução do Flask
+## 7 – Execução do Flask
 
 ```bash
 cd /opt/mitigador
@@ -239,7 +241,7 @@ python3 app.py
 
 ---
 
-## 🖱️ Etapa 8 – Teste da Mitigação
+## 8 – Teste da Mitigação
 
 - Vá ao dashboard no Splunk
 
@@ -261,7 +263,7 @@ python3 app.py
 
 ---
 
-## ✅ Etapa 9 – Aplicação no iptables
+## 9 – Aplicação no iptables
 
 - Depois de realizar os testes, execute o comando para validar as listas no iptables:
 
@@ -272,7 +274,7 @@ sudo iptables -I INPUT -m set --match-set blacklist src -j DROP
 
 ---
 
-## 💾 Etapa 10 – Persistência das Regras
+## 10 – Persistência das Regras
 
 - A ipset não é permanente e some após o reboot, para torna-la permanente:
 
@@ -283,29 +285,23 @@ sudo iptables-save > /etc/iptables/rules.v4
 
 ---
 
-## 📌 Considerações Finais
+## Considerações Finais
 
-- Este laboratório demonstra uma solução generalista de mitigação manual, permitindo responder a quaisquer alertas detectados pelo Suricata de forma interativa via Splunk e aplicação direta no firewall.
+Esse laboratório mostra uma forma simples e flexível de responder manualmente a alertas do Suricata usando Splunk e um backend em Flask para aplicar bloqueios em tempo real. A ideia foi entender melhor como lidar com os eventos dentro do Splunk e aplicar ações no firewall, sem depender de soluções prontas.
 
 ---
 
-## ⚠️ Limitações (Intencionais)
+## Limitações (Intencionais)
 
-- Falta autenticação no Flask
+- O Flask ainda não tem autenticação nem logging
+- As ações são manuais, sem qualquer automação
+- O CSV é só um quebra-galho — não serve pra escalar
+- A proposta aqui é criar algo do zero, em vez de usar TheHive ou Cortex logo de cara
 
-- Mitigação manual via clique, sem automação
+## Próximos Passos
 
-- CSV como armazenamento simples, não escalável
-
-- Criar um SOAR manual ao invés de utilizar as opções disponíveis: TheHive+Cortex
----
-
-## 🚀 Próximos Passos
-
-- Implementar autenticação e logging no Flask (Caso eu decidir progredir com o soar em flask)
-
-- Automatizar respostas com critérios e limiares (Proximos labs)
-
-- Migrar para backend persistente (Banco de dados, KVStore)
+- Adicionar autenticação e logs ao Flask (caso o projeto continue nessa linha)
+- Começar a automatizar as respostas
+- Trocar o CSV por algo mais robusto, como um banco de dados ou a KVStore do próprio Splunk
 
 
