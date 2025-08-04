@@ -11,19 +11,21 @@ Esse repositório é onde concentro tudo o que venho testando, analisando e apre
 --- 
 
 ## O que você vai encontrar aqui
-Laboratórios práticos, análises forenses, detecção de ameaças, resposta a incidentes e testes em ambientes reais. Sempre com ferramentas open-source, explicações clara e documentação feita na unha.
+Laboratórios, análises forenses, detecção de ameaças, resposta a incidentes e testes em ambientes reais. Sempre com ferramentas open-source, explicações clara e documentação feita na unha.
 
 ---
 
 ## Ferramentas que utilizo
 
-- Wireshark, tcpdump, Zeek
+- Wazuh, TheHive, Cortex
 
-- Suricata, Splunk
+- Suricata, Splunk, Iptables
+
+- Kibana, Elasticsearch
 
 - YARA, FLOSS, PE-bear, DIE
 
-- Nmap, Metasploit...
+- Crowdstrike, Nmap, Metasploit...
 
 ---  
                                    
