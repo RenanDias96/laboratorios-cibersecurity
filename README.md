@@ -17,11 +17,11 @@ Laboratórios, análises forenses, detecção de ameaças, resposta a incidentes
 
 ## Ferramentas que utilizo
 
-- Wazuh, TheHive, Cortex
+- Wazuh, Shuffle, Cortex
 
 - Suricata, Splunk, Iptables
 
-- Kibana, Elasticsearch
+- MISP, RTIR, OpenSearch
 
 - YARA, FLOSS, PE-bear, DIE
 
