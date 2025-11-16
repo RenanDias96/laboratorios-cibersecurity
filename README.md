@@ -62,9 +62,9 @@ Tudo documentado passo a passo e com explicações claras, feito na prática. �
   <img src="assets/analise-malware.png" alt="Capa Analise Malware" width="600"/>
 </p>
 
-- [Trojan GuLoader – Análise Estática + Regra YARA](Laboratorios-e-Simulacoes/Forense/Analise-de-Malware/01-Trojan-GuLoader/README.md): Análise de malware com PE-bear, DIE e FLOSS → criei uma regra YARA do zero para detectar persistência, evasão e execução de scripts.
+- [Engenharia Reversa de Malware (Trojan Loader)](Laboratorios-e-Simulacoes/Forense/Analise-de-Malware/01-Trojan-GuLoader/README.md): Análise de malware com PE-bear, DIE e FLOSS → criei uma regra YARA do zero para detectar persistência, evasão e execução de scripts.
 
-- [Botnet IRC + SSH via PCAP](Laboratorios-e-Simulacoes/Forense/Analise-de-Malware/02-Botnet-IRC-SSH/README.md): Tráfego capturado de botnet usando IRC como C2 e persistência por SSH. A análise foca em IOCs, técnicas de exfiltração e comportamento da ameaça.
+- [Análise Forense de PCAP — Botnet IRC + Persistência SSH](Laboratorios-e-Simulacoes/Forense/Analise-de-Malware/02-Botnet-IRC-SSH/README.md): Tráfego capturado de botnet usando IRC como C2 e persistência por SSH. A análise foca em IOCs, técnicas de exfiltração e comportamento da ameaça.
 
 ### Caso TR-069 – Investigação em Ambiente Real (ISP)
 
