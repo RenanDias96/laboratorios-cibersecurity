@@ -5,7 +5,7 @@ A ação tomada no dashboard dispara uma requisição para um backend Flask, que
 
 É um exercício prático de resposta a incidentes, construído do zero, sem depender de soluções prontas como **TheHive ou Cortex**. 
 
--  Documento criado por **Renan DIAS MENDES**
+-  Documento criado por **Renan Dias Mendes**
 -  Atualizado em **25/07/2025**
 
 ---
