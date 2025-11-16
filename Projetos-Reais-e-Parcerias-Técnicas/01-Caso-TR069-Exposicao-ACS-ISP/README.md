@@ -1,49 +1,58 @@
-# Investigação Técnica: Exposição ACS (TR-069) em Ambiente ISP Real
+# 🛰️ Investigação Técnica: Exposição ACS (TR-069) em Ambiente ISP Real
 
 **Início da análise:** 03/06/2025  
-**Autor:** Renan D M  
+**Autor:** Renan Dias Mends  
 **Foco:** Detecção, análise e documentação de uma falha de exposição CWMP (TR-069) em servidor ACS de um ISP real.
 
 ---
 
-## Introdução
+## 📝 Introdução
 
-Esta investigação começou a partir da identificação de um servidor ACS (TR-069) exposto à internet por um ISP. O objetivo foi entender os riscos envolvidos, simular requisições legítimas feitas por CPEs e documentar as implicações de segurança.
+Identifiquei um servidor ACS exposto à internet e iniciei uma investigação com foco em:
 
-Todo o processo foi feito com responsabilidade: sem exploração ofensiva, com autorização prévia, uso de ferramentas open source e foco exclusivo em documentação técnica.
+- Entender os riscos associados à exposição TR-069
 
+- Simular requisições legítimas de CPEs
+
+- Documentar impactos e boas práticas de mitigação
+
+Todo o processo foi **ético e seguro**: sem exploração ofensiva, com autorização prévia, uso de ferramentas open-source e foco exclusivo em documentação técnica.
 ---
 
-## Estrutura
+## 📂 Estrutura do Material
 
-O material está dividido em **5 pastas principais**, seguindo uma **ordem cronológica de investigação**. Cada pasta contém documentação detalhada, testes práticos e prints ilustrativos.
+O material está organizado em 5 pastas principais, seguindo a ordem cronológica da investigação:
 
 |Etapa|                   Pasta                           |                           Descrição                                                         |
 |----|----------------------------------------------------|---------------------------------------------------------------------------------------------|
 | 1️⃣ | [Exposição Inicial](01-Analise-Inicial-Exposicao/README.md)                     | Análise inicial da exposição (portas, painel, respostas básicas) |
-| 2️⃣ | [Vulnerabilidades em Requisições SOAP](02-Analise-Tecnica-ACS-SOAP/README.md)                      | Testes com exemplos reais de requisições e respostas |
+| 2️⃣ | [Vulnerabilidades em Requisições SOAP](02-Analise-Tecnica-ACS-SOAP/README.md)                      | Testes com requisições SOAP reais e avaliação de riscos |
 | 3️⃣ | [Resumo](03-Resumo-Tecnico-ACS/README.md)                            | Versão resumida para leitura rápida ou público não técnico |
 | 4️⃣ | [Resposta-ACS](04-Resposta-ACS/README.md)                                  | Resposta da equipe técnica responsável pelo ACS |
 | 5️⃣ | [Replica](05-Replica-Tecnica/README.md)                               | Réplica com argumentos e sugestões de mitigação |
 
-> A leitura na ordem sugerida ajuda a entender a progressão da investigação, desde a descoberta inicial até os desdobramentos com o fornecedor.
+> ⚡ Seguir a ordem facilita compreender a evolução da investigação, do descobrimento inicial às respostas do fornecedor.
 
 ---
+s
+## 🔍 Por que isso importa
 
-## Por que isso importa?
+- Ataques TR-069 não são novidade: exemplos como o Mirai exploraram exposições similares.
 
-- Ataques baseados em TR-069 não são novidade. Casos como Mirai exploraram exatamente esse tipo de exposição para comprometer milhões de dispositivos. A ausência de autenticação nas requisições SOAP permite simular um CPE e injetar comandos no ACS, o que amplia drasticamente a superfície de ataque de um ISP.
-- Documentar esse tipo de falha é essencial para incentivar boas práticas e reforçar a segurança em ambientes reais de telecomunicações.
-- E eu sou cliente do ISP em questão rsrs
+- A ausência de autenticação nas requisições SOAP permite simular CPEs e enviar comandos ao ACS, aumentando significativamente a superfície de ataque.
+
+- Documentar essas falhas ajuda a reforçar boas práticas e segurança em ISPs.
+
+- E sim… eu sou cliente do ISP em questão 😅
   
 ---
 
-## Ética e responsabilidade
+## ⚖️ Ética e responsabilidade
 
 - Nenhum dado sensível foi divulgado.
-- Todos os nomes e logotipos foram removidos ou anonimizados.
-- Os testes foram passivos, focados apenas em simular comportamentos legítimos de CPE.
+- Nomes e logotipos foram anonimizados
+- Testes foram passivos, focando apenas em simular comportamentos legítimos de CPE
 
 ---
 
-> ⚠️ *Esta investigação representa uma situação real de exposição crítica, com documentação técnica precisa e ética. O objetivo é educacional, contribuindo para melhores práticas em ISPs e infraestrutura de rede.*
+> ⚠️ *Esta investigação documenta uma exposição crítica real com rigor técnico e ética. Objetivo: educacional, contribuindo para melhores práticas em ISPs e segurança de redes.*
