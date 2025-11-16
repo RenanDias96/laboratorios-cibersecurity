@@ -1,4 +1,4 @@
-# Mitigação Manual | Splunk + Flask + iptables
+# Mini-SOAR Manual de Resposta a Incidentes | Splunk + Suricata + Flask + iptables
 
 Este laboratório demonstra como aplicar mitigação manual diretamente a partir de alertas do Suricata exibidos no Splunk.
 A ação tomada no dashboard dispara uma requisição para um backend Flask, que atualiza listas de bloqueio (ipset) e aplica regras no iptables em tempo real.
