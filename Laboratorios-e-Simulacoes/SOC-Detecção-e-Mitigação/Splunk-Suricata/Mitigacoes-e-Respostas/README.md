@@ -21,7 +21,7 @@ A proposta é transformar alertas em ações de contenção e mitigação, desde
 
 | Tópico                                        | Descrição                                                                                       |
 |-----------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [Mitigação Manual a Alertas com Splunk + Flask + iptables](Mitigação-Manual-a-Alertas-com-Splunk+Flask+iptables/README.md)            | Backend em Flask controlando respostas via botões e aplicação de bloqueios       |
+| [Mini-SOAR Manual de Resposta a Incidentes | Splunk + Suricata + Flask + iptables](Mitigação-Manual-a-Alertas-com-Splunk+Flask+iptables/README.md)            | Backend em Flask controlando respostas via botões e aplicação de bloqueios       |
 
 ---
 
