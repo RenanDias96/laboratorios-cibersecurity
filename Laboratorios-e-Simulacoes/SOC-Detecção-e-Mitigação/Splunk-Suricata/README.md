@@ -1,7 +1,7 @@
 # Splunk + Suricata — Integração IDS + SIEM
 
 <p align="center">
-  <img src="../../../assets/splunk.png" alt="Capa do Laboratório de Cibersegurança" width="600"/>
+  <img src="../../../assets/splunk.png" alt="Capa do Laboratório de Cibersegurança" width="800"/>
 </p>
 
 Este projeto documenta a integração entre o Suricata (IDS) e o Splunk (SIEM) para construção de um ambiente funcional de monitoramento e resposta a incidentes em redes locais.
