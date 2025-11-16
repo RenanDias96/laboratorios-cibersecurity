@@ -52,7 +52,7 @@ Tudo documentado passo a passo e com explicações claras, feito na prática. �
   <img src="assets/siem.png" alt="Capa SIEM" width="600"/>
 </p>
 
-- [Mitigação Manual a Alertas com Splunk + Flask + iptables](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Splunk-Suricata/Mitigacoes-e-Respostas/Mitigação-Manual-a-Alertas-com-Splunk+Flask+iptables/README.md): Alertas do Suricata vão para o Splunk, que aciona um backend Flask e aguarda a decisão de bloquear ou passar via iptables.
+- [Mini-SOAR Manual de Resposta a Incidentes | Splunk + Suricata + Flask + iptables](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Splunk-Suricata/Mitigacoes-e-Respostas/Mitigação-Manual-a-Alertas-com-Splunk+Flask+iptables/README.md): Alertas do Suricata vão para o Splunk, que aciona um backend Flask e aguarda a decisão de bloquear ou passar via iptables.
 
 - [Detecção de Portscan com Suricata + Splunk](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Splunk-Suricata/Regras-e-Alertas/01-Portscan/README.md):  Regras personalizadas para identificar portscans em tempo real com visualização no Splunk.
 
