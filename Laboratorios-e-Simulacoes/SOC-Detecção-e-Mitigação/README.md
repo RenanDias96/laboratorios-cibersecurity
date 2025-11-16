@@ -1,7 +1,7 @@
 # 🖥️ 🛡️ SOC – Detecção e Mitigação
 
 <p align="center">
-  <img src="../../assets/soc.png" alt="Capa SOC" width="600"/>
+  <img src="../../assets/soc.png" alt="Capa SOC" width="800"/>
 </p>
 
 Laboratórios focados em detecção de ameaças em redes e host, simulando cenários corporativos.
