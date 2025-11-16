@@ -1,7 +1,7 @@
 # Mitigações e Respostas
 
 <p align="center">
-  <img src="../../../../assets/siem.png" alt="Capa Siem" width="600"/>
+  <img src="../../../../assets/siem.png" alt="Capa Siem" width="800"/>
 </p>
 
 Esta seção é dedicada à implementação de respostas manuais e automáticas utilizando o Suricata como IDS/IPS e ferramentas como Splunk, iptables e scripts personalizados.
