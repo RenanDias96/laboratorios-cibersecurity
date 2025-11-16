@@ -4,7 +4,7 @@
   <img src="../../assets/forense.png" alt="Capa do Laboratório de Forense" width="800"/>
 </p>
 
-A seção **Forense** deste repositório é dedicada à análise de ameaças, malwares e tráfego suspeito, com foco em **resposta a incidentes**, **threat hunting** e **engenharia reversa**.  
+A seção **Forense** é dedicada à análise de ameaças, malwares e tráfego suspeito, com foco em **resposta a incidentes**, **threat hunting** e **engenharia reversa**.  
 O objetivo é entender o comportamento das amostras, extrair indicadores de comprometimento (IOCs) e criar assinaturas personalizadas para detecção.
 
 ---

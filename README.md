@@ -1,7 +1,9 @@
-# 💻 Laboratórios de Cibersegurança – Renan Dias Mendes
+# 💻 Laboratórios - Renan Dias Mendes
 
-**Caçando ameaças e construindo defesas desde 2024** 👾
-SOC | Threat Hunting | Malware Analysis | Resposta a Incidentes | Hands-on com ferramentas open-source
+### **Caçando ameaças e construindo defesas desde 2024** 👾
+
+> SOC | Threat Hunting | Malware Analysis | Resposta a Incidentes | Hands-on com ferramentas open-source
+
 --- 
 
 ## 🛠️ O que você vai encontrar aqui
@@ -50,9 +52,9 @@ Tudo documentado passo a passo e com explicações claras, feito na prática. �
   <img src="assets/siem.png" alt="Capa SIEM" width="600"/>
 </p>
 
-- [Mitigação Manual a Alertas com Splunk + Flask + iptables](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Splunk-Suricata/Mitigacoes-e-Respostas/Mitigação-Manual-a-Alertas-com-Splunk+Flask+iptables/README.md): Resposta a incidentes feita do zero: alertas do Suricata vão para o Splunk, que aciona um backend Flask e aguarda a decisão de bloquear ou passar via iptables.
+- [Mitigação Manual a Alertas com Splunk + Flask + iptables](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Splunk-Suricata/Mitigacoes-e-Respostas/Mitigação-Manual-a-Alertas-com-Splunk+Flask+iptables/README.md): Alertas do Suricata vão para o Splunk, que aciona um backend Flask e aguarda a decisão de bloquear ou passar via iptables.
 
-- [Detecção de Portscan com Suricata + Splunk](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Splunk-Suricata/Regras-e-Alertas/01-Portscan/README.md):  Regras personalizadas para identificar portscans (SYN, FIN, NULL, XMAS, UDP) em tempo real com visualização no Splunk.
+- [Detecção de Portscan com Suricata + Splunk](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Splunk-Suricata/Regras-e-Alertas/01-Portscan/README.md):  Regras personalizadas para identificar portscans em tempo real com visualização no Splunk.
 
 ### Análises de Malware
 
@@ -60,7 +62,7 @@ Tudo documentado passo a passo e com explicações claras, feito na prática. �
   <img src="assets/analise-malware.png" alt="Capa Analise Malware" width="600"/>
 </p>
 
-- [Trojan GuLoader – Análise Estática + Regra YARA](Laboratorios-e-Simulacoes/Forense/Analise-de-Malware/01-Trojan-GuLoader/README.md): Análise manual de malware com PE-bear, DIE e FLOSS → criei uma regra YARA do zero para detectar persistência, evasão e execução de scripts.
+- [Trojan GuLoader – Análise Estática + Regra YARA](Laboratorios-e-Simulacoes/Forense/Analise-de-Malware/01-Trojan-GuLoader/README.md): Análise de malware com PE-bear, DIE e FLOSS → criei uma regra YARA do zero para detectar persistência, evasão e execução de scripts.
 
 - [Botnet IRC + SSH via PCAP](Laboratorios-e-Simulacoes/Forense/Analise-de-Malware/02-Botnet-IRC-SSH/README.md): Tráfego capturado de botnet usando IRC como C2 e persistência por SSH. A análise foca em IOCs, técnicas de exfiltração e comportamento da ameaça.
 

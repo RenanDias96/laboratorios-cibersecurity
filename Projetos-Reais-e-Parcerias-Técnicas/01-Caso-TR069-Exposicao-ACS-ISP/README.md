@@ -1,7 +1,7 @@
 # 🛰️ Investigação Técnica: Exposição ACS (TR-069) em Ambiente ISP Real
 
 **Início da análise:** 03/06/2025  
-**Autor:** Renan Dias Mends  
+**Autor:** Renan Dias Mendes  
 **Foco:** Detecção, análise e documentação de uma falha de exposição CWMP (TR-069) em servidor ACS de um ISP real.
 
 ---
@@ -34,7 +34,7 @@ O material está organizado em 5 pastas principais, seguindo a ordem cronológic
 > ⚡ Seguir a ordem facilita compreender a evolução da investigação, do descobrimento inicial às respostas do fornecedor.
 
 ---
-s
+
 ## 🔍 Por que isso importa
 
 - Ataques TR-069 não são novidade: exemplos como o Mirai exploraram exposições similares.
