@@ -2,7 +2,7 @@
 
 **Objetivo:** Detectar e classificar diferentes tipos de varredura de portas utilizando regras personalizadas no Suricata, com visualização e alertas em tempo real no Splunk Enterprise.
 
-Autor **Renan D M**  
+Autor **Renan Dias Mendes**  
 Atualizado em **18/06/2025**
 
 ---
