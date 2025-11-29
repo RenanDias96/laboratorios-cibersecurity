@@ -19,7 +19,7 @@ Este lab mostra, na prática, como identificar um ataque de brute force SSH usan
 
 ## 1. Preparação do Ambiente
 
-**Caso não tenha o Wazuh e os agents, da uma olhadinha aqui:** [Intalação](../../Instalacao/README.md)
+**Caso não tenha o Wazuh e os agents, da uma olhadinha aqui:** [Instalação](../../Instalacao/README.md)
 
 Baixe a VM pronta do Kali Linux:
 
