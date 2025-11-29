@@ -24,22 +24,17 @@ Tudo documentado passo a passo e com explicações claras, feito na prática. �
 
 ## 🔧 Ferramentas que utilizo
 
-- Wazuh, Shuffle, Cortex
+- Wazuh, Shuffle, Cortex  
+- Suricata, Splunk, Iptables  
+- MISP, RTIR, OpenSearch  
+- YARA, FLOSS, PE-bear, DIE  
+- Crowdstrike, Nmap, Metasploit, Hydra...
 
-- Suricata, Splunk, Iptables
-
-- MISP, RTIR, OpenSearch
-
-- YARA, FLOSS, PE-bear, DIE
-
-- Crowdstrike, Nmap, Metasploit...
-
-- [Ferramentas](Laboratorios-e-Simulacoes/Forense/Ferramentas/README.md)
----  
+---
                                    
 | Seção                                                                 | Descrição                                                                                 |
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [Laboratórios e Simulações](Laboratorios-e-Simulacoes/README.md)   | 	Ambientes simulados, varreduras, ataques controlados e detecções em tempo real.                 |
+| [Laboratórios e Simulações](Laboratorios-e-Simulacoes/README.md)   | Ambientes simulados, varreduras, ataques controlados e detecções em tempo real.           |
 | [Projetos Reais e Parcerias Técnicas](Projetos-Reais-e-Parcerias-Técnicas/README.md) | Investigações em ambientes reais — com exposição de falhas e réplicas técnicas. |
 
 ---
@@ -49,12 +44,14 @@ Tudo documentado passo a passo e com explicações claras, feito na prática. �
 ### SIEM & Regras Customizadas
 
 <p align="center">
-  <img src="assets/siem.png" alt="Capa SIEM" width="600"/>
+  <img src="assets/wazuh.png" alt="Capa SIEM" width="600"/>
 </p>
 
-- [Mini-SOAR Manual de Resposta a Incidentes | Splunk + Suricata + Flask + iptables](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Splunk-Suricata/Mitigacoes-e-Respostas/Mitigação-Manual-a-Alertas-com-Splunk+Flask+iptables/README.md): Alertas do Suricata vão para o Splunk, que aciona um backend Flask e aguarda a decisão de bloquear ou passar via iptables.
+- [Detecção e Mitigação de Brute Force SSH com Wazuh + Hydra + IPTables](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Wazuh/Eventos-e-Deteccoes/BruteForce-SSH+Mitigacao-Iptables/README.md): Ataques de brute force SSH são monitorados pelo Wazuh, analisados em tempo real e mitigados manualmente via iptables.
 
-- [Detecção de Portscan com Suricata + Splunk](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Splunk-Suricata/Regras-e-Alertas/01-Portscan/README.md):  Regras personalizadas para identificar portscans em tempo real com visualização no Splunk.
+- [Mitigação Manual a Alertas com Splunk + Flask + iptables](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Splunk-Suricata/Mitigacoes-e-Respostas/Mitigação-Manual-a-Alertas-com-Splunk+Flask+iptables/README.md): Alertas do Suricata vão para o Splunk, que aciona um backend Flask e aguarda a decisão de bloquear ou passar via iptables.
+
+- [Detecção de Portscan com Suricata + Splunk](Laboratorios-e-Simulacoes/SOC-Detecção-e-Mitigação/Splunk-Suricata/Regras-e-Alertas/01-Portscan/README.md): Regras personalizadas para identificar portscans em tempo real com visualização no Splunk.
 
 ### Análises de Malware
 
@@ -82,12 +79,12 @@ Tudo documentado passo a passo e com explicações claras, feito na prática. �
 
 ## Contato
 
-📫 LinkedIn: [Renan Dias Mendes](https://www.linkedin.com/in/renan-dias-mendes-571926373/)
+📫 LinkedIn: [Renan Dias Mendes](https://www.linkedin.com/in/renan-dias-mendes-571926373/)  
 ✉️ E-mail: renandmm96@gmail.com
 
 ---
 
 > ⚠️ **Este portfólio está em constante evolução.**  
-> Prometo trazer mais atualizações!
-> Cada erro virou aprendizado, cada acerto virou documentação. Tudo feito na raça, com dedicação e muuuito café ☕.
+> Prometo trazer mais atualizações!  
+> Cada erro virou aprendizado, cada acerto virou documentação. Tudo feito na raça, com dedicação e muuuito café ☕.  
 > **Obrigado pela visita!**

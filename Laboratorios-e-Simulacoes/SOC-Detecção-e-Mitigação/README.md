@@ -9,6 +9,11 @@ O objetivo: aprender a detectar, responder e mitigar ataques usando ferramentas 
 
 ---
 
+### `🔗 Wazuh`
+> Monitoramento e detecção com Wazuh (SIEM/EDR), agentes Windows/Linux e integrações Blue Team.
+
+👉 [Ver pasta](Wazuh/README.md)
+
 ### `🔗 Splunk + Suricata`
 > Integração entre o IDS Suricata e o SIEM Splunk para detecção e resposta.
 
