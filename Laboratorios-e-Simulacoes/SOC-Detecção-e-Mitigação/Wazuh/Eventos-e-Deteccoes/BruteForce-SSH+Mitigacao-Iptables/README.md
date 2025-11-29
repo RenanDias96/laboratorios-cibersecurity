@@ -1,7 +1,7 @@
 # Detecção e Mitigação de Brute Force SSH com Wazuh + Hydra + IPTables
 
 Este lab mostra, na prática, como identificar um ataque de brute force SSH usando Wazuh, simular o ataque com Hydra e aplicar bloqueio manual via IPTables.
-É um fluxo típico de SOC N1: detectar → confirmar → validar impacto → mitigar.
+É um fluxo típico de SOC N1: detectar > confirmar > validar impacto > mitigar.
 
 -  Documento criado por **RENAN DIAS MENDES**
 -  Atualizado em **28/11/2025**
@@ -18,6 +18,8 @@ Este lab mostra, na prática, como identificar um ataque de brute force SSH usan
 ---
 
 ## 1. Preparação do Ambiente
+
+**Caso não tenha o Wazuh e os agents, da uma olhadinha aqui:** [Intalação](../../Instalacao/README.md)
 
 Baixe a VM pronta do Kali Linux:
 
